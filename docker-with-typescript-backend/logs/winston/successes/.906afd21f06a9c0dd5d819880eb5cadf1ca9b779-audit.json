@@ -1,0 +1,55 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\.906afd21f06a9c0dd5d819880eb5cadf1ca9b779-audit.json",
+    "files": [
+        {
+            "date": 1736678955659,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-49-15-success.log",
+            "hash": "1c8f502b188095b8dc383dd935b67b4251396855677d826eaccca99f02d6cea5"
+        },
+        {
+            "date": 1736678994130,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-49-54-success.log",
+            "hash": "3cb7ce3ddfb4bffa5afd3841d011ee813667a5b7b0d769e03961d1942368142a"
+        },
+        {
+            "date": 1736678997169,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-49-57-success.log",
+            "hash": "858ff3b16c5a6ccac6d97044fac7ca0de1503e330a47e2cb0fa246b201b7231f"
+        },
+        {
+            "date": 1736679335395,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-35-success.log",
+            "hash": "0585d904d5515bf61a2d2c8182651eae9635980a090f06697c8f0a714b03b8d1"
+        },
+        {
+            "date": 1736679338263,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-38-success.log",
+            "hash": "fde80a2e838d760a07dcc4ff623871d23cea9a08f4125558e5fbe3cc1ac2e3bc"
+        },
+        {
+            "date": 1736679342429,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-42-success.log",
+            "hash": "6566d4e0abc788a260a5e3e3d7d5b46946360abe4f1ab5355de6eecb571bf59d"
+        },
+        {
+            "date": 1736679345320,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-45-success.log",
+            "hash": "c80f263c932423c5dac5207f73c6a5618aa6ed49dc797c64bf9b9953e283288e"
+        },
+        {
+            "date": 1736679351391,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-51-success.log",
+            "hash": "7e8140c03ff51536e45e185eb88573a2b8298ecd822debcc899409fa2158efa3"
+        },
+        {
+            "date": 1736679354223,
+            "name": "D:\\NextLevel\\module-4\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-12-16-55-54-success.log",
+            "hash": "5c9d7a25d9cc17e3865808fff65a8c03a1ffccdfd50dc217116c3358ee189c1a"
+        }
+    ],
+    "hashType": "sha256"
+}

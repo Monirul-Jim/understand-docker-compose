@@ -1,0 +1,47 @@
+Learn from this simple project
+docker build -t  ts-docker-monirul:v1 .                                                 ---- this is for build image
+docker images
+docker run -p 5000:5000 --name ts-docker-container-monirul --rm  ts-docker              ---- this is for run container
+docker container ls                                                                     ---- this is for show all container
+docker container stop ts-docker-container-monirul                                       ---- this is for stop a container
+docker container start --attach ts-docker-container-monirul                             ---- this is for run container in attach mood
+docker container prune                                                                  ---- for delete all container
+docker ps -a                                                                            ---- show running container
+docker container inspect container_name                                                 ---- show all details about a container
+----------------------------------------- Introduction to docker volumes --------------------------------------------------------------
+ docker volume ls                                                                                              ----- show all volume
+ docker run -p 5000:5000 --name ts-container-monirul --rm -v ts-docker-logs:/app/logs  ts-docker-monirul:v2    ----- named volume
+ docker volume rm ts-container-monirul                                                                         ----- for delete volume
+
+ --------------------------------------------- Bind Mount  --------------------------------------------
+ 
+docker run -p 5000:5000 --name ts-container-monirul  -v  ts-docker-logs://app/logs -w //app  -v "//d/NextLevel/docker-with-typescript-backend"://app -v //app/node_modules  --rm ts-docker-monirul:v1
+docker run -p 5000:5000 --name ts-container-monirul  -v  ts-docker-logs://app/logs -w //app  -v "//$(pwd)"://app -v //app/node_modules  --rm --env-file ./.env ts-docker-monirul:v1
+
+------- if use powershell terminal-------
+docker run -p 5000:5000 --name ts-container-monirul  -v  ts-docker-logs://app/logs -w //app  -v "//${pwd}://app" -v //app/node_modules  --rm ts-docker-monirul:v1    -just {} use
+
+ ------------------------------------------------------cmd--------------------------------------------------------------
+docker run -p 5000:5000 --name ts-container-monirul  -v  ts-docker-logs://app/logs -w //app  -v "%cd%"://app -v //app/node_modules  --rm ts-docker-monirul:v1  
+
+-----------------------------------------------------------------Internal database connect ------------------------------------------------
+DATABASE_URL=mongodb://localhost:27017/explore_docker   docker cant understand this 
+DATABASE_URL=mongodb://host.docker.internal:27017/explore_docker   
+
+-------------------------------------------- docker network---------------------------------------------------------------------------------
+docker pull mongo
+docker network create ts-docker-network 
+docker network ls
+docker run --name mongodb --rm --network ts-docker-network  mongo
+docker run -p 5000:5000 --name ts-containe --rm -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules --rm --env-file .env --network ts-docker-network ts-docke
+r-monirul:v1
+docker network rm net_id
+---------------------------------front end command--------------------------------
+ docker run --name ts-docker-frontend-container  --rm -p 3000:3000 --env-file .env.local -w //app -v "//$(pwd)"://app -v //app/node_modules --network ts-docker-net -e WATCHPACK_POLLING=true  ts-docker-frontend:v1
+  docker run --name mongodb --rm -v ts-docke-db://data/db  --network ts-docker-net  mongo         -------- for secure database
+
+
+
+
+  ----------------------------------------------- adding more security for database ------------------------
+docker run --name mongodb --rm -v ts-docke-db://data/db -e MONGO_INITDB_ROOT_USERNAME=ts-docker -e MONGO_INITDB_ROOT_PASSWORD=ts-docker  --network ts-docker-net  mongo
