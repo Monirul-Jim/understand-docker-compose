@@ -45,3 +45,11 @@ docker network rm net_id
 
   ----------------------------------------------- adding more security for database ------------------------
 docker run --name mongodb --rm -v ts-docke-db://data/db -e MONGO_INITDB_ROOT_USERNAME=ts-docker -e MONGO_INITDB_ROOT_PASSWORD=ts-docker  --network ts-docker-net  mongo
+after this added env file
+DATABASE_URL=mongodb://ts-docker:ts-docker@mongodb:27017/explore_docker?authSource=admin
+
+------------------------------------------------------------------- Docker Compose----------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+docker-compose up          - run 
+docker-compose down        - stop container
+docker-compose down -v     - remove volumes
