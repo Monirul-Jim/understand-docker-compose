@@ -25,7 +25,18 @@ services:
     depends_on:
       - mongodb
 
-#   ts-docker-frontend-container:
+  ts-docker-frontend-container:
+    build:
+      context: ./docker-with-nextjs-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./docker-with-nextjs-frontend:/app
+    env_file:
+      - ./docker-with-nextjs-frontend/.env.local
+    depends_on:
+      - ts-docker-backend-container
 volumes:
   ts-docker-db:
   ts-docker-logs:
