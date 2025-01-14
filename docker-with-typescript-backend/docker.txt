@@ -54,3 +54,11 @@ docker-compose up          - run
 docker-compose down        - stop container
 docker-compose down -v     - remove volumes
 docker-compose up -d
+
+
+------------------------------------------------------------------- Docker Utils ----------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+FROM node:20-alpine
+docker run --name node-util -w //app "//$(pwd)"://app -it --rm -d node-utils
+docker ps
+docker exec -it node-util npm init -y
