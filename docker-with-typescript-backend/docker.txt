@@ -53,3 +53,4 @@ DATABASE_URL=mongodb://ts-docker:ts-docker@mongodb:27017/explore_docker?authSour
 docker-compose up          - run 
 docker-compose down        - stop container
 docker-compose down -v     - remove volumes
+docker-compose up -d
